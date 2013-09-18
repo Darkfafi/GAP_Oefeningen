@@ -5,8 +5,8 @@ package {
 	public class RocketEnemyShip extends EnemyShip {
 		public function RocketEnemyShip() {
 			
-			setName("RocketEnemyShip");
-			setDamage(10);
+			shipName		=	"RocketEnemyShip";
+			damage		=	10;
 		}
 	}
 }

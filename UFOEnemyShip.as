@@ -5,8 +5,8 @@ package {
 	public class UFOEnemyShip extends EnemyShip {
 		public function UFOEnemyShip() {
 			
-			setName("UFOEnemyShip");
-			setDamage(20);
+			shipName		=	"UFOEnemyShip";
+			damage		=	20;
 			
 		}
 	}
