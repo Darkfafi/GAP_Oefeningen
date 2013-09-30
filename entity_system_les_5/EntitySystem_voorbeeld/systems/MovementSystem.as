@@ -6,6 +6,7 @@ package systems {
 		
 		override public function update():void
 		{
+			// in deze update staat de logica om de objecten te laten bewegen
 			for each( var target:Entity in targets )
 			{
 				if(target.position.x < 0)

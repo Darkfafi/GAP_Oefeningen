@@ -5,7 +5,9 @@ package {
 	 */
 	public class Engine {
 		
+		// lijst met alle entities in deze game
 		private var _entities:Vector.<Entity>	=	new Vector.<Entity>();
+		// lijst met alle systemen in deze game
 		private var _systems:Vector.<System>	=	new Vector.<System>();
 	
 		public function addEntity( entity:Entity ):void

@@ -4,6 +4,8 @@ package systems {
 	 */
 	public class System {
 		
+		// dit is de basis van alle systemen
+		
 		protected var _targets:Vector.<Entity>;
 		
 		public function update() : void

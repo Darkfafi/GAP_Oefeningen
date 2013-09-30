@@ -7,6 +7,8 @@ package {
 	 */
 	public class Entity {
 		
+		// de entity heeft standaard de volgende componenten
+		// volgende week maken we dit 'abstracter'
 		private var _display 	:	DisplayComponent;
 		private var _position	:	PositionComponent;
 		private var _velocity	:	VelocityComponent;
