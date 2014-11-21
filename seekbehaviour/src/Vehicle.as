@@ -44,9 +44,6 @@ package
 			var desiredStep:Vector2D	=	target.subtract(_position);
 			var distanceToTarget		=	desiredStep.length;
 			
-			// we kunnen deze lijn laten zien door drawVector aan te roepen
-			//desiredStep.drawVector(_vectorGraphic.graphics, 0x00FF00);
-			
 			// deze desiredStep mag niet groter zijn dan de maximale Speed
 			//
 			// als een vector ge'normalized' is .. dan houdt hij dezelfde richting
@@ -72,7 +69,9 @@ package
 			// uiteindelijk voegen we de steering force toe maar wel gedeeld door de 'mass'
 			// hierdoor gaat hij niet in een rechte lijn naar de target
 			// hoe zwaarder het object hoe moeilijker hij kan bijsturen
-			_velocity.add(steeringForce.divide(_mass));
+			steeringForce.divide(_mass);
+			
+			_velocity.add(steeringForce);
 			
 			// rotation = the velocity's angle converted to degrees
 			rotation = _velocity.angle * 180 / Math.PI;
