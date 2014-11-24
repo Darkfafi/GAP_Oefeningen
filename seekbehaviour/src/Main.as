@@ -2,6 +2,7 @@ package
 {
 	import flash.display.Sprite;
 	import flash.events.Event;
+	import flash.events.MouseEvent;
 	
 	/**
 	 * ...
@@ -10,7 +11,7 @@ package
 	public class Main extends Sprite 
 	{
 		
-		private var ball : Ball;
+		private var _paraglider : Paraglider;
 		
 		public function Main():void 
 		{
@@ -23,20 +24,22 @@ package
 			removeEventListener(Event.ADDED_TO_STAGE, init);
 			
 			
-			ball = new Ball();
+			_paraglider = new Paraglider();
 			
-			addChild(ball);
+			addChild(_paraglider);
 			
+			stage.addEventListener(MouseEvent.CLICK, setTarget);
 			addEventListener(Event.ENTER_FRAME, update);
+		}
+		
+		private function setTarget(e:MouseEvent):void 
+		{
+			_paraglider.setTarget( new Vector2D(e.stageX, e.stageY) );
 		}
 		
 		private function update(e : Event) : void
 		{
-			
-			ball.seek(new Vector2D(mouseX, mouseY));
-			
-			
-			ball.update();
+			_paraglider.update();
 		}
 		
 	}

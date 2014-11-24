@@ -9,24 +9,24 @@ package
 	{
 		
 		// onze belangrijkste Vectors: velocity (beweging) en positie
-		private var _velocity	:	Vector2D	=	new Vector2D(3, 3);
+		private var _velocity	:	Vector2D	=	new Vector2D(0, 0);
 		private var _position	:	Vector2D	=	new Vector2D(0, 0);
-		
-		// extra sprite om de groene pijl in te tekenen
-		private var _vectorGraphic	: Sprite;
 		
 		private var _maxSpeed		:	Number	=	1;
 		private var _mass			:	Number	=	1;
-		private var _slowingRadius	: Number	=	100;
+		private var _slowingRadius	:	Number	=	100;
+		
+		private var _target : Vector2D; // wat is onze target op dit moment?
 		
 		public function Vehicle() 
 		{
-			_vectorGraphic	=	new Sprite();
-			addChild(_vectorGraphic);
 		}
 		
 		public function update():void
 		{
+			
+			// eerst zoeken we onze target op en proberen we te sturen
+			seek();
 			
 			// beweeg het object door middel van de Euler formule positie = positie + velocity
 			_position = _position.add(_velocity);
@@ -38,10 +38,18 @@ package
 			
 		}
 		
-		public function seek(target:Vector2D) : void
+		public function seek() : void
 		{
+			// als we geen target hebben, stop deze functie
+			if (!_target)
+			{
+				return; // door 'return' stopt deze functie
+			}
+			
+			var currentTarget : Vector2D = _target.cloneVector();
+			
 			// we berekenen eerst de afstand/Vector tot de 'target' (in dit voorbeeld de muis)
-			var desiredStep:Vector2D	=	target.subtract(_position);
+			var desiredStep:Vector2D	=	currentTarget.subtract(_position);
 			var distanceToTarget		=	desiredStep.length;
 			
 			// deze desiredStep mag niet groter zijn dan de maximale Speed
@@ -55,14 +63,6 @@ package
 			// de x en y van deze Vector wordt zo vanzelf omgerekend
 			var desiredVelocity:Vector2D			=	desiredStep.multiply(maxSpeed);
 			
-			// de desiredVelocity is de stap die we zouden willen zetten richting de target
-			// we kunnen met distanceToTarget ook kijken of we al binnen de slowingRadius zitten
-			// zo ja: dan verminderen we de desiredVelocity
-			if (distanceToTarget < slowingRadius)
-			{
-				desiredVelocity	=	desiredVelocity.multiply(desiredVelocity.length / _slowingRadius);
-			}
-			
 			// bereken wat de Vector moet zijn om bij te sturen om bij de desiredVelocity te komen
 			var steeringForce:Vector2D = desiredVelocity.subtract(_velocity);
 			
@@ -75,6 +75,11 @@ package
 			
 			// rotation = the velocity's angle converted to degrees
 			rotation = _velocity.angle * 180 / Math.PI;
+		}
+		
+		public function setTarget(target:Vector2D):void 
+		{
+			_target = target;
 		}
 		
 		public function get maxSpeed():Number 

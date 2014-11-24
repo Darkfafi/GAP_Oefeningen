@@ -5,12 +5,12 @@ package
 	 * ...
 	 * @author Berend Weij
 	 */
-	public class Ball extends Vehicle
+	public class Paraglider extends Vehicle
 	{
 		
-		// de class 'Ball' extend de Vehicle. Hierdoor heeft hij functies zoals 'seek'
+		// de class 'Paraglider' extend de Vehicle. Hierdoor heeft hij functies zoals 'seek'
 		// ook andere objecten kunnen nu eenvoudig de Vehicle class extenden
-		public function Ball() 
+		public function Paraglider() 
 		{
 			var size : int = 30;
 			this.graphics.beginFill(0xFF0000);
@@ -22,6 +22,8 @@ package
 			maxSpeed	=	10;
 			mass		=	25;
 		}
+		
+		
 	}
 
 }
