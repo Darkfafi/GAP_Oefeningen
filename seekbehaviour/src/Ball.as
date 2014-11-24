@@ -10,7 +10,7 @@ package
 		
 		// de class 'Ball' extend de Vehicle. Hierdoor heeft hij functies zoals 'seek'
 		// ook andere objecten kunnen nu eenvoudig de Vehicle class extenden
-		public function Ball() 
+		public function Ball(massGiven : int, maxSpeedGiven : int) 
 		{
 			var size : int = 30;
 			this.graphics.beginFill(0xFF0000);
@@ -19,8 +19,8 @@ package
 			this.graphics.lineTo(-size/2, size/2);
 			this.graphics.lineTo(0, 0);
 						
-			maxSpeed	=	10;
-			mass		=	25;
+			maxSpeed	=	maxSpeedGiven;
+			mass		=	massGiven;
 		}
 	}
 
