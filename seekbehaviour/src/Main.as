@@ -31,26 +31,23 @@ package
 		{
 			for (var i : int = 0; i < amount; i++) {
 				var ball : Ball;
-				var mass : int = Math.floor(Math.random() * 50) + 10;
-				var speed : int = Math.floor(Math.random() * 50) + 5;
+				
+				var mass : int = Math.floor(Math.random() * 20) + 10;
+				var speed : int = Math.floor(Math.random() * 20) + 5;
 				
 				ball = new Ball(mass, speed);
 				ball.x = 50 * i;
 				ball.y = 200;
 				addChild(ball);
 				allBalls.push(ball);
+				
+				ball.target = allBalls[i - 1]; // <-- gives the target
 			}
 		}
 		
 		private function update(e : Event) : void
 		{
-			
 			for (var i : int = allBalls.length - 1; i >= 0; i--) {
-				if(i != 0){
-					allBalls[i].seek(new Vector2D(allBalls[i - 1].x, allBalls[i - 1].y ));
-				}else {
-					allBalls[i].seek(new Vector2D(mouseX, mouseY));
-				}
 				allBalls[i].update();
 			}
 		}

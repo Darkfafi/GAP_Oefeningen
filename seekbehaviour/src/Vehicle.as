@@ -42,7 +42,7 @@ package
 		{
 			// we berekenen eerst de afstand/Vector tot de 'target' (in dit voorbeeld de muis)
 			var desiredStep:Vector2D	=	target.subtract(_position);
-			var distanceToTarget		=	desiredStep.length;
+			var distanceToTarget : Number =	desiredStep.length;
 			
 			// we kunnen deze lijn laten zien door drawVector aan te roepen
 			//desiredStep.drawVector(_vectorGraphic.graphics, 0x00FF00);
