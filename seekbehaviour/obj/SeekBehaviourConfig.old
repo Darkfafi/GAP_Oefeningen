@@ -32,12 +32,21 @@
     </define>
     <verbose-stacktraces>true</verbose-stacktraces>
     <source-path append="true">
+<<<<<<< HEAD
       <path-element>C:\Users\Darkfafi\Desktop\Mediacollege Amsterdam\LeerJaar2\Fase1\AgdGap\GapOefeningen\seekbehaviour\src</path-element>
       <path-element>C:\Program Files (x86)\FlashDevelop\Library\AS3\classes</path-element>
     </source-path>
   </compiler>
   <file-specs>
     <path-element>C:\Users\Darkfafi\Desktop\Mediacollege Amsterdam\LeerJaar2\Fase1\AgdGap\GapOefeningen\seekbehaviour\src\Main.as</path-element>
+=======
+      <path-element>C:\Users\Berend Weij\Documents\workspace\voorbeeldles\seekbehaviour\src</path-element>
+      <path-element>C:\Program Files\FlashDevelop\Library\AS3\classes</path-element>
+    </source-path>
+  </compiler>
+  <file-specs>
+    <path-element>C:\Users\Berend Weij\Documents\workspace\voorbeeldles\seekbehaviour\src\Main.as</path-element>
+>>>>>>> 8af08b0f305f863f57d4e6aaa1b3e8c60230381a
   </file-specs>
   <default-background-color>#FFFFFF</default-background-color>
   <default-frame-rate>30</default-frame-rate>

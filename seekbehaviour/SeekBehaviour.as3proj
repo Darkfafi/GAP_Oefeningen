@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="utf-8"?>
 <project>
   <!-- Output SWF options -->
@@ -10,6 +11,21 @@
     <movie height="600" />
     <movie version="11" />
     <movie minorVersion="1" />
+=======
+﻿<?xml version="1.0" encoding="utf-8"?>
+<project version="2">
+  <!-- Output SWF options -->
+  <output>
+    <movie outputType="Application" />
+    <movie input="" />
+    <movie path="bin\SeekBehaviour.swf" />
+    <movie fps="30" />
+    <movie width="800" />
+    <movie height="600" />
+    <movie version="10" />
+    <movie minorVersion="1" />
+    <movie platform="Flash Player" />
+>>>>>>> 8af08b0f305f863f57d4e6aaa1b3e8c60230381a
     <movie background="#FFFFFF" />
   </output>
   <!-- Other classes to be compiled into your SWF -->
@@ -19,6 +35,7 @@
   <!-- Build options -->
   <build>
     <option accessible="False" />
+<<<<<<< HEAD
     <option allowSourcePathOverlap="False" />
     <option benchmark="False" />
     <option es="False" />
@@ -26,6 +43,20 @@
     <option optimize="True" />
     <option showActionScriptWarnings="True" />
     <option showBindingWarnings="True" />
+=======
+    <option advancedTelemetry="False" />
+    <option allowSourcePathOverlap="False" />
+    <option benchmark="False" />
+    <option es="False" />
+    <option inline="False" />
+    <option locale="" />
+    <option loadConfig="" />
+    <option optimize="True" />
+    <option omitTraces="True" />
+    <option showActionScriptWarnings="True" />
+    <option showBindingWarnings="True" />
+    <option showInvalidCSS="True" />
+>>>>>>> 8af08b0f305f863f57d4e6aaa1b3e8c60230381a
     <option showDeprecationWarnings="True" />
     <option showUnusedTypeSelectorWarnings="True" />
     <option strict="True" />
@@ -33,17 +64,55 @@
     <option useResourceBundleMetadata="True" />
     <option warnings="True" />
     <option verboseStackTraces="False" />
+<<<<<<< HEAD
     <option staticLinkRSL="True" />
     <option additional="" />
     <option customSDK="" />
   </build>
+=======
+    <option linkReport="" />
+    <option loadExterns="" />
+    <option staticLinkRSL="True" />
+    <option additional="" />
+    <option compilerConstants="" />
+    <option minorVersion="" />
+  </build>
+  <!-- SWC Include Libraries -->
+  <includeLibraries>
+    <!-- example: <element path="..." /> -->
+  </includeLibraries>
+  <!-- SWC Libraries -->
+  <libraryPaths>
+    <!-- example: <element path="..." /> -->
+  </libraryPaths>
+  <!-- External Libraries -->
+  <externalLibraryPaths>
+    <!-- example: <element path="..." /> -->
+  </externalLibraryPaths>
+  <!-- Runtime Shared Libraries -->
+  <rslPaths>
+    <!-- example: <element path="..." /> -->
+  </rslPaths>
+  <!-- Intrinsic Libraries -->
+  <intrinsics>
+    <!-- example: <element path="..." /> -->
+  </intrinsics>
+  <!-- Assets to embed into the output SWF -->
+  <library>
+    <!-- example: <asset path="..." id="..." update="..." glyphs="..." mode="..." place="..." sharepoint="..." /> -->
+  </library>
+>>>>>>> 8af08b0f305f863f57d4e6aaa1b3e8c60230381a
   <!-- Class files to compile (other referenced classes will automatically be included) -->
   <compileTargets>
     <compile path="src\Main.as" />
   </compileTargets>
   <!-- Paths to exclude from the Project Explorer tree -->
   <hiddenPaths>
+<<<<<<< HEAD
     <!-- example: <hidden path="..." /> -->
+=======
+    <hidden path="obj" />
+>>>>>>> 8af08b0f305f863f57d4e6aaa1b3e8c60230381a
   </hiddenPaths>
   <!-- Executed before build -->
   <preBuildCommand />
@@ -53,5 +122,12 @@
   <options>
     <option showHiddenPaths="False" />
     <option testMovie="Default" />
+<<<<<<< HEAD
   </options>
+=======
+    <option testMovieCommand="" />
+  </options>
+  <!-- Plugin storage -->
+  <storage />
+>>>>>>> 8af08b0f305f863f57d4e6aaa1b3e8c60230381a
 </project>

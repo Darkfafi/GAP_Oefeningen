@@ -2,6 +2,10 @@ package
 {
 	import flash.display.Sprite;
 	import flash.events.Event;
+<<<<<<< HEAD
+=======
+	import flash.events.MouseEvent;
+>>>>>>> 8af08b0f305f863f57d4e6aaa1b3e8c60230381a
 	
 	/**
 	 * ...
@@ -9,7 +13,12 @@ package
 	 */
 	public class Main extends Sprite 
 	{
+<<<<<<< HEAD
 		private var allBalls : Array = [];
+=======
+		
+		private var _paraglider : Paraglider;
+>>>>>>> 8af08b0f305f863f57d4e6aaa1b3e8c60230381a
 		
 		public function Main():void 
 		{
@@ -21,6 +30,7 @@ package
 		{
 			removeEventListener(Event.ADDED_TO_STAGE, init);
 			
+<<<<<<< HEAD
 			generateBalls(5);
 			
 			
@@ -43,13 +53,31 @@ package
 				
 				ball.target = allBalls[i - 1]; // <-- gives the target
 			}
+=======
+			
+			_paraglider = new Paraglider();
+			
+			addChild(_paraglider);
+			
+			stage.addEventListener(MouseEvent.CLICK, setTarget);
+			addEventListener(Event.ENTER_FRAME, update);
+		}
+		
+		private function setTarget(e:MouseEvent):void 
+		{
+			_paraglider.setTarget( new Vector2D(e.stageX, e.stageY) );
+>>>>>>> 8af08b0f305f863f57d4e6aaa1b3e8c60230381a
 		}
 		
 		private function update(e : Event) : void
 		{
+<<<<<<< HEAD
 			for (var i : int = allBalls.length - 1; i >= 0; i--) {
 				allBalls[i].update();
 			}
+=======
+			_paraglider.update();
+>>>>>>> 8af08b0f305f863f57d4e6aaa1b3e8c60230381a
 		}
 		
 	}
